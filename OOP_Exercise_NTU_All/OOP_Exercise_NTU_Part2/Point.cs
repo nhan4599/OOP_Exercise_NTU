@@ -55,5 +55,15 @@ namespace OOP_Exercise_NTU_Part2
         {
             return string.Format("({0},{1})", this.x, this.y);
         }
+
+        public double Distance(int x, int y)
+        {
+            return Math.Sqrt(Math.Pow(x - this.x, 2) + Math.Pow(y - this.y, 2));
+        }
+
+        public double Distance(Point another)
+        {
+            return Math.Sqrt(Math.Pow(another.x - this.x, 2) + Math.Pow(another.y - this.y, 2));
+        }
     }
 }
