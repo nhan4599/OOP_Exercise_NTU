@@ -58,14 +58,9 @@ namespace OOP_Exercise_NTU_Part2
 
         public override string ToString()
         {
-            //string temp = string.Empty;
-            ////Array.ForEach(this.authors, m => temp += m.ToString() + ",");
-            //temp = temp.Remove(temp.Length - 1);
-            string[] temp = new string[this.authors.Length];
-            for (int i = 0; i < temp.Length; i++)
-            {
-                temp[i] = this.authors[i].ToString();
-            }
+            string temp = string.Empty;
+            Array.ForEach(this.authors, m => temp += m.ToString() + ",");
+            temp = temp.Remove(temp.Length - 1);
             return string.Format("Book[name={0},authors={{{1}}},price={2},qty={3}]",
                 this.name, string.Join(",", temp), this.price, this.qty);
         }
