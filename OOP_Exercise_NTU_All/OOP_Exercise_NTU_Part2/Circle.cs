@@ -84,5 +84,7 @@
         {
             return this.radius * 2 * System.Math.PI;
         }
+
+        public double Distance(Circle another) => center.Distance(another.GetCenter());
     }
 }
